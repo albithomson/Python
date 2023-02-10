@@ -1,0 +1,23 @@
+Create a Bus child class that inherits from the Vehicle class. The default fare charge of any vehicle is seating capacity * 100. If Vehicle is Bus instance,
+we need to add an extra 10% on full fare as a maintenance charge. So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
+
+class Vehicle:
+  def __init__(self):
+    self.seat_cap=seat_cap
+  def Total_fare(self,seat_cap):
+    Total_fare= self.seat_cap * 100
+    return Total_fare
+  def Bus(self,Total_fare):
+    extra = (Total_fare * 10) /100
+    final_amount = Total_fare + extra
+    print(final_amount)
+
+
+seat_cap = int(input("Enter the seat capacity"))
+vehicle= input("Enter vehicle type")
+lis=Vehicle()
+Total_fare=lis.Total_fare(seat_cap)
+if vehicle=="bus":
+    lis.Bus(Total_fare)
+else:
+  print(Total_fare)
